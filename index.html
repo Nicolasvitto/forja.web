@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forja de Armas</title>
+</head>
+<body>
+    <h1>Forja de Armas</h1>
+    <form id="formForja" onsubmit="return false;">
+        <label for="selectArma">Selecione o tipo de arma:</label><br>
+        <select id="selectArma">
+            <option value="espada">Espada</option>
+            <option value="machado">Machado</option>
+        </select><br><br>
+
+        <label for="selectRaridade">Selecione a raridade:</label><br>
+        <select id="selectRaridade">
+            <option value="único">Único</option>
+            <option value="raro">Raro</option>
+            <option value="épico">Épico</option>
+            <option value="lendário">Lendário</option>
+        </select><br><br>
+
+        <button onclick="buscarMonstrosFortes()">Forjar Arma</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function tiposMonstrosFortes(arma, raridade) {
+            const armasFortesPorRaridade = {
+                'espada': {
+                    'único': ['fera', 'demônio', 'servo', 'troll','trasgo'],
+                    'raro': ['fera', 'servo', 'troll', 'demônio'],
+                    'épico': ['trasgo',  'golem', 'milícia'],
+                    'lendário': ['zumbi', 'bandido']
+                },
+                'machado': {
+                    'único': ['bandido','zumbi'],
+                    'raro': ['bandido', 'zumbi'],
+                    'épico': ['fera', 'servo', 'troll', 'demônio'],
+                    'lendário': ['milícia', 'trasgo']
+                }
+            };
+
+            if (arma in armasFortesPorRaridade && raridade in armasFortesPorRaridade[arma]) {
+                return armasFortesPorRaridade[arma][raridade];
+            } else {
+                return "Combinação de arma e raridade não encontrada.";
+            }
+        }
+
+        function buscarMonstrosFortes() {
+            const armaDesejada = document.getElementById("selectArma").value;
+            const raridadeDesejada = document.getElementById("selectRaridade").value;
+
+            const monstrosFortes = tiposMonstrosFortes(armaDesejada, raridadeDesejada);
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (monstrosFortes !== "Combinação de arma e raridade não encontrada.") {
+                resultadoDiv.innerHTML = `<p>A ${armaDesejada} de raridade ${raridadeDesejada} pode ser forjada por armas forte contra: ${monstrosFortes.join(', ')}</p>`;
+            } else {
+                resultadoDiv.innerHTML = "<p>Combinação de arma e raridade não encontrada.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
