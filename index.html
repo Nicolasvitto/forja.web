@@ -3,7 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="version" content="1.5">
     <title>Forja de Armas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #resultado p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <h1>Forja de Armas</h1>
@@ -12,6 +77,7 @@
         <select id="selectArma">
             <option value="espada">Espada</option>
             <option value="machado">Machado</option>
+            <option value="martelo">martelo</option>
         </select><br><br>
 
         <label for="selectRaridade">Selecione a raridade:</label><br>
@@ -31,7 +97,7 @@
         function tiposMonstrosFortes(arma, raridade) {
             const armasFortesPorRaridade = {
                 'espada': {
-                    'único': ['fera', 'demônio', 'servo', 'troll','trasgo'],
+                    'único': ['fera', 'demônio', 'servo', 'troll', 'trasgo'],
                     'raro': ['fera', 'servo', 'troll', 'demônio'],
                     'épico': ['trasgo',  'golem', 'milícia'],
                     'lendário': ['zumbi', 'bandido']
@@ -41,7 +107,14 @@
                     'raro': ['bandido', 'zumbi'],
                     'épico': ['fera', 'servo', 'troll', 'demônio'],
                     'lendário': ['milícia', 'trasgo']
+                },
+                'martelo' : {
+                    'único':['golem','milicia',],
+                    'raro':['golem','milicia'],
+                    'épico':['bandido','zumbi'],
+                    'lendario':['fera','servo','golem','troll'],
                 }
+        
             };
 
             if (arma in armasFortesPorRaridade && raridade in armasFortesPorRaridade[arma]) {
@@ -59,7 +132,7 @@
             const resultadoDiv = document.getElementById("resultado");
 
             if (monstrosFortes !== "Combinação de arma e raridade não encontrada.") {
-                resultadoDiv.innerHTML = `<p>A ${armaDesejada} de raridade ${raridadeDesejada} pode ser forjada por armas forte contra: ${monstrosFortes.join(', ')}</p>`;
+                resultadoDiv.innerHTML = `<p>A ${armaDesejada} de raridade ${raridadeDesejada} forje as seguintes armas fortes para obter a arma desejada: ${monstrosFortes.join(', ')} </p>`;
             } else {
                 resultadoDiv.innerHTML = "<p>Combinação de arma e raridade não encontrada.</p>";
             }
