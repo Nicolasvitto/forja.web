@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.galeria {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.galeria img {
+	width: 500px;
+	height: 400px;
+	margin: 30px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#home-m ul{
+    list-style: none;
+    padding: 0;
+    background-color: rgb(37, 37, 39);
+}
+#home-m ul li{
+    display: inline;
+}
+
+#home-m ul a{
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: backgroud.6s;
+    
+}
+
+#home-m ul li a:hover {
+    background-color:#0b73a7;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}

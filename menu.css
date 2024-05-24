@@ -1,0 +1,55 @@
+body {
+    margin: -1;
+    padding: -1;
+    background-image: url('foto de fundo.webp');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999; /* Garante que o menu de navegação fique acima da imagem de fundo */
+}
+
+#home-m ul {
+    list-style: none;
+    padding: 0;
+    background-color: rgb(37, 37, 39);
+    margin-top: 0; /* Adicionado para corrigir o espaço extra no topo do menu */
+}
+
+#home-m ul li {
+    display: inline;
+}
+
+#home-m ul a {
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.6s; /* Corrigido o typo na transição */
+}
+
+#home-m ul li a:hover {
+    background-color: #0b73a7;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Estilização da imagem de fundo */
+img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1; /* Garante que a imagem de fundo fique atrás do conteúdo */
+    width: auto; /* Adicionado para manter a proporção original da imagem */
+    height: 690px;
+    min-width: 100%; /* Adicionado para garantir que a imagem cubra toda a tela */
+    min-height: 50%;
+}
