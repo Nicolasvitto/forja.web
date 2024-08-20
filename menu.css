@@ -1,10 +1,10 @@
 body {
     margin: -1;
     padding: -1;
-    background-image: url('Atlantica_Background.webp');
+    background: #0b73a7;
     background-size: cover;
     background-position: center;
-    font-family: Arial, sans-serif;
+    font-family: "Chakra Petch", system-ui;
 }
 
 nav {
@@ -42,14 +42,5 @@ nav {
     text-decoration: none;
 }
 
-/* Estilização da imagem de fundo */
-img {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: -1; /* Garante que a imagem de fundo fique atrás do conteúdo */
-    width: auto; /* Adicionado para manter a proporção original da imagem */
-    height: 690px;
-    min-width: 100%; /* Adicionado para garantir que a imagem cubra toda a tela */
-    min-height: 50%;
-}
+
+

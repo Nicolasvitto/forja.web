@@ -3,112 +3,121 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-    font-family: Arial,sans-serif ;
-    margin: 0;
-    padding: 0;
-    background-color: #c8c8c8;
-  }
-  #dov {
-    display: flex;
-    justify-content: flex-end;
-    bottom: 0px;
-    right: 900px;
-    position: fixed;
-  }
-  h1 {
-    text-align: center;
-    margin-top: 30px;
-    color: #000013;
-  }
-  h6 {
-    text-align: center;
-    margin-top: 30px;
-    color: #000013
-  }
-  option {
-    color:#000013;
-  }
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #000013;
-  }
-  
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #e8ebee;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #e7e7e8;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2b3551;
-    color: #f5f5f5;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #2b3551;
-  }
-  
-  #resultado {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(246, 246, 246, 0.1);
-    border: 1px solid #ddd;
-  }
-  
-  #resultado p {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #000013;
-  }
-  #home-m ul{
-    list-style: none;
-    padding: 0;
-    background-color: rgb(37, 37, 39);
-}
-#home-m ul li{
-    display: inline;
+  font-family: "Chakra Petch", system-ui;
+  margin: 0;
+  padding: 0;
+  background-color: #c8c8c8;
 }
 
-#home-m ul a{
-    color: #fff;
-    padding: 20px;
-    display: inline-block;
-    text-decoration: none;
-    transition: backgroud.6s;
-    
+#dov {
+  display: flex;
+  justify-content: flex-end;
+  bottom: 0px;
+  right: 900px;
+  position: fixed;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #000013;
+}
+
+h6 {
+  text-align: center;
+  margin-top: 10px;
+  color: #000013;
+  margin: 20px;
+}
+
+option {
+  color: #000013;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #000013;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e8ebee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #e7e7e8;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2b3551;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2b3551;
+}
+
+#resultado {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(246, 246, 246, 0.1);
+  border: 1px solid #ddd;
+}
+
+#resultado p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000013;
+}
+
+#home-m ul {
+  list-style: none;
+  padding: 0;
+  background-color: rgb(37, 37, 39);
+}
+
+#home-m ul li {
+  display: inline;
+}
+
+#home-m ul a {
+  color: #fff;
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  transition: backgroud.6s;
+
 }
 
 #home-m ul li a:hover {
-    background-color:#0b73a7;
-    padding: 20px;
-    display: inline-block;
-    text-decoration: none;
+  background-color: #0b73a7;
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
 }
